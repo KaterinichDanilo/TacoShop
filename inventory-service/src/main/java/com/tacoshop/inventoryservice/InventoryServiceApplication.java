@@ -18,8 +18,9 @@ public class InventoryServiceApplication {
 	public CommandLineRunner loadData(InventoryRepository inventoryRepository) {
 		return args -> {
 			Inventory inventory = new Inventory();
-			inventory.setTacoName("Grigoriy");
+			inventory.setIngredientName("Tomato");
 			inventory.setQuantity(5);
+			inventory.setPrice(0.5);
 
 			inventoryRepository.save(inventory);
 		};

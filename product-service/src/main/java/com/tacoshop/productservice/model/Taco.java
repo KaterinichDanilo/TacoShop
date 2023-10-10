@@ -17,8 +17,6 @@ import java.util.Map;
 @Builder
 public class Taco {
     @Id
-    private long id;
-    @Indexed(unique = true)
     private String name;
     @Indexed(unique = true)
     private Map<String, Integer> ingredients;

@@ -26,4 +26,10 @@ public class TacoController {
     public List<TacoResponse> getAllTacos() {
         return tacoService.getAllTacos();
     }
+
+    @GetMapping("/allByNames")
+    @ResponseStatus(HttpStatus.OK)
+    public List<TacoResponse> getAllTacosByNamesIn(@RequestParam List<String> tacosNamesList) {
+        return tacoService.getAllTacosByNameIn(tacosNamesList);
+    }
 }

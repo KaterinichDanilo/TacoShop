@@ -1,9 +1,6 @@
-package com.tacoshop.productservice.dto;
+package com.tacoshop.orderservice.dto;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.util.Map;
 
@@ -11,6 +8,7 @@ import java.util.Map;
 @AllArgsConstructor
 @Data
 @Builder
+@ToString
 public class TacoResponse {
     private String name;
     private Map<String, Integer> ingredients;

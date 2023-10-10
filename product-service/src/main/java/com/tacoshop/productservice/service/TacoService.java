@@ -33,9 +33,13 @@ public class TacoService {
         return tacoList.stream().map(this::mapToTacoResponse).collect(Collectors.toList());
     }
 
+    public List<TacoResponse> getAllTacosByNameIn(List<String> tacoNamesList) {
+        List<Taco> tacoList = tacoRepository.findAllByNameIn(tacoNamesList);
+        return tacoList.stream().map(this::mapToTacoResponse).collect(Collectors.toList());
+    }
+
     private TacoResponse mapToTacoResponse(Taco taco) {
         return TacoResponse.builder()
-                .id(taco.getId())
                 .name(taco.getName())
                 .price(taco.getPrice())
                 .ingredients(taco.getIngredients())

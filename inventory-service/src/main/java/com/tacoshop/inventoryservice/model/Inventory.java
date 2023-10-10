@@ -13,8 +13,9 @@ public class Inventory {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private String tacoName;
+    private String ingredientName;
     private int quantity;
+    private double price;
 
 
 }
